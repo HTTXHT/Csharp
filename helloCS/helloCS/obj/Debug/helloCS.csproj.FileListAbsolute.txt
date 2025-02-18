@@ -1,0 +1,7 @@
+D:\helloCsharp\helloCS\helloCS\bin\Debug\helloCS.exe.config
+D:\helloCsharp\helloCS\helloCS\bin\Debug\helloCS.exe
+D:\helloCsharp\helloCS\helloCS\bin\Debug\helloCS.pdb
+D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.csproj.AssemblyReference.cache
+D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.csproj.CoreCompileInputs.cache
+D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.exe
+D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.pdb
