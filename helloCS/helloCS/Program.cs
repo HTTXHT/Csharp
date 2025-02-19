@@ -8,7 +8,8 @@ namespace helloCS
         //函数，方法
         static void Main()
         {
-
+            //输出
+            System.Console.WriteLine("Hello, C#");
         }
     }
 }
