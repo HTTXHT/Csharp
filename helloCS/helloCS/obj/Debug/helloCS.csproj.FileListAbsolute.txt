@@ -5,3 +5,10 @@ D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.csproj.AssemblyReference.cache
 D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.csproj.CoreCompileInputs.cache
 D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.exe
 D:\helloCsharp\helloCS\helloCS\obj\Debug\helloCS.pdb
+D:\helloCsharp\csharp\helloCS\helloCS\bin\Debug\helloCS.exe.config
+D:\helloCsharp\csharp\helloCS\helloCS\bin\Debug\helloCS.exe
+D:\helloCsharp\csharp\helloCS\helloCS\bin\Debug\helloCS.pdb
+D:\helloCsharp\csharp\helloCS\helloCS\obj\Debug\helloCS.csproj.AssemblyReference.cache
+D:\helloCsharp\csharp\helloCS\helloCS\obj\Debug\helloCS.csproj.CoreCompileInputs.cache
+D:\helloCsharp\csharp\helloCS\helloCS\obj\Debug\helloCS.exe
+D:\helloCsharp\csharp\helloCS\helloCS\obj\Debug\helloCS.pdb

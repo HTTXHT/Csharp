@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
+//命名空间
 namespace helloCS
 {
+    //类型
     class Program
     {
-        static void Main(string[] args)
+        //函数，方法
+        static void Main()
         {
-            Console.WriteLine("Hello");
-            Console.ReadKey();
+
         }
     }
 }
