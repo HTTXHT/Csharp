@@ -2,18 +2,23 @@
 //命名空间
 namespace helloCS
 {
-    //类型
+    //类型 
     class Program
     {
         //函数，方法
         static void Main()
         {
+            //变量类型 变量名 = 值
 
-            var n = 100;
-            var m = 200;
-            var sum = 0;
+            int n = 100;
+            int m = 200;
+            int sum = 0;
             sum = n + m;
-            Console.WriteLine("sum = " + sum);
+            string name = "你的计算结果是：";
+
+            Console.WriteLine(name);
+            Console.WriteLine(sum);
+           
             Console.ReadKey();
         }
     }
