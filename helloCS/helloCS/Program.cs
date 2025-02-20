@@ -9,7 +9,7 @@ namespace helloCS
         static void Main()
         {
             //输出
-            System.Console.WriteLine("Hello, C#");
+            System.Console.WriteLine("Hello");
         }
     }
 }
