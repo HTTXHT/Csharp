@@ -1,17 +1,27 @@
 ﻿using System;
 using System.Security.Permissions;
-//命名空间
-namespace helloCS
+
+namespace helloCS     //命名空间
 {
-    //类型 
-    class Program
+ 
+    class Program   //类型 
     {
-        //函数，方法
-        static void Main()
+        
+        static void Main()    //函数，方法
         {
+            GetUserInfo();
 
-            
 
+
+            Console.ReadKey();
+
+        }
+
+
+
+
+        static void GetUserInfo()
+        {
             //名称收集
             Console.WriteLine("请输入你的姓名");
             string name = Console.ReadLine();
@@ -21,19 +31,18 @@ namespace helloCS
             {
                 Console.WriteLine("你输入的是张三");
                 name = "法外狂徒张三";
-
             }
             else if (name == "李四")
             {
                 Console.WriteLine("你输入的是李四");
                 name = "李四大傻逼";
-            }  
+            }
             else
             {
                 Console.WriteLine("你输入的是" + name);
             }
             Console.WriteLine();
-        
+
 
             //家乡收集
             Console.WriteLine("请输入你的故乡");
@@ -49,10 +58,12 @@ namespace helloCS
             Console.WriteLine("你的名字是:" + name);
             Console.WriteLine("你的故乡是:" + address);
             Console.WriteLine("你的爱好是:" + aihao);
-
-            Console.ReadKey();
-
         }
+
+
+
+
+
     }
 }
 
