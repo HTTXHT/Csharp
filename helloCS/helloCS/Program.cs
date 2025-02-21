@@ -24,19 +24,28 @@ namespace helloCS
             //名称收集
             Console.WriteLine("请输入你的姓名");
             string name = Console.ReadLine();
+            Console.WriteLine();
 
-            bool isCheck = name == "张三";
-            if (isCheck)
+            if (name == "张三")
             {
+                Console.WriteLine("你输入的是张三");
                 name = "法外狂徒张三";
-                Console.WriteLine(             );
-           
-                Console.WriteLine("法外狂徒张三");
-                
+
+            }
+            else if (name == "李四")
+            {
+                Console.WriteLine("你输入的是李四");
+                name = "李四大傻逼";
+            }  
+            else
+            {
+                Console.WriteLine("你输入的是" + name);
             }
 
 
             Console.WriteLine();
+
+
             //家乡收集
             Console.WriteLine("请输入你的故乡");
             string address = Console.ReadLine();
