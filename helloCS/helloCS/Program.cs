@@ -10,23 +10,32 @@ namespace helloCS     //命名空间
         
         static void Main()    //函数，方法
         {
-
-            for (int i = 0; i < 1000000000; i++)
-            {
-                GetUserInfo();
-            }
-
-            Console.ReadKey();
+            string name = "";
+            PanDuan(name);
+            Console.WriteLine("录入结束");
         }
 
 
+        static void PanDuan(string name)
+        {
+            //bool bool1 = (name != "法外狂徒张三");
+            for (int i=0; i<1;i++)
+            {
+                GetUserInfo(name);
+                Console.WriteLine("继续下一个录入");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+           
+        }
 
 
-        static void GetUserInfo()
+        static string  GetUserInfo(string name)
         {
             //名称收集
             Console.WriteLine("请输入你的姓名");
-            string name = Console.ReadLine();
+            name = Console.ReadLine();
 
             //家乡收集
             Console.WriteLine("请输入你的故乡");
@@ -47,6 +56,9 @@ namespace helloCS     //命名空间
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
+            
+            return name;
+
 
         }
 
