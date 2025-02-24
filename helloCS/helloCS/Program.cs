@@ -22,7 +22,7 @@ namespace helloCS     //命名空间
                 }
                 catch
                 {
-                    Console.WriteLine("请正确输入年龄!!!");
+                    Console.WriteLine("格式有误，请正确输入年龄!!!");
                     Console.WriteLine();
                 }            
             }
