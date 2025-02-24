@@ -9,41 +9,33 @@ namespace helloCS     //命名空间
 
         static void Main()    //函数，方法
         {
-            Console.WriteLine("请输入你的年龄：");
-            string str = Console.ReadLine();
             int age = 0;
-            try
+            bool isCheck = true;
+            for (; isCheck;)
             {
-                age = int.Parse(str);
-            }
-            catch
-            {
-                Console.WriteLine("请输入正确年龄（必须是数字）");
-
-                str = Console.ReadLine();
+                Console.WriteLine("请输入你的年龄：");
+                string str = Console.ReadLine();
                 try
-                {
+                { 
                     age = int.Parse(str);
+                    isCheck = false ;
                 }
                 catch
                 {
-                    Console.WriteLine("请输入正确年龄（必须是数字）");
-
-                    Console.ReadKey();
-                    return;
-                }
-
-                age = age + 10;
-
-                string name = Console.ReadLine();
-                Console.WriteLine("你的名字是：" + name);
-
-                Console.WriteLine("你十年后的年龄是：" + age);
-                Console.ReadKey();
-
+                    Console.WriteLine("请正确输入年龄!!!");
+                    Console.WriteLine();
+                }            
             }
 
+            age = age + 10;
 
+            Console.WriteLine("请输入你的姓名：");
+            string name = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("你的名字是：" + name);
+            Console.WriteLine("你十年后的年龄是：" + age);
+            Console.ReadKey();
 
 
 
@@ -51,17 +43,17 @@ namespace helloCS     //命名空间
         }
 
 
-            //static void Main()    //函数，方法
-            //{
-            //    string name = "";
-            //    PanDuan(name);
-            //    Console.WriteLine("录入结束");
-            //}
+        //static void Main()    //函数，方法
+        //{
+        //    string name = "";
+        //    PanDuan(name);
+        //    Console.WriteLine("录入结束");
+        //}
 
 
 
 
-            static void PanDuan(string name)
+        static void PanDuan(string name)
             {
                 for (; name != "姓名法外狂徒张三";)
                 {
