@@ -139,9 +139,9 @@ namespace wodekongjian     //命名空间
                 gongji = 10;
                 xueliang = 100;
                 jineng = 2;
-                jineng1 = "「天雷破岳」（剑法）";
+                jineng1 = "「天雷破岳」";
                 miaoshu1 = "内力凝聚于剑尖，如天雷般狂暴，一剑劈下，山岳为之震颤";
-                jineng2 = "「幽冥无影」（身法）";
+                jineng2 = "「幽冥无影」";
                 miaoshu2 = "身形飘忽不定，剑招无影无形。";
                 ShowInfo(xingbie);
             }
@@ -153,9 +153,9 @@ namespace wodekongjian     //命名空间
                 gongji = 10;
                 xueliang = 100;
                 jineng = 2;
-                jineng1 = "「月华倾天」（剑法）";
+                jineng1 = "「月华倾天」";
                 miaoshu1 = "剑光如月华洒落，清冷而凌厉,连绵不绝，如月笼地";
-                jineng2 = "「蝶舞翩跹」（身法）";
+                jineng2 = "「蝶舞翩跹」";
                 miaoshu2 = "身姿如彩蝶飞舞，轻盈灵动，步法优雅而难以捉摸";
                 ShowInfo(xingbie);
             }
@@ -219,12 +219,12 @@ namespace wodekongjian     //命名空间
             Console.WriteLine($"║ 血量:       {xueliang.ToString().PadRight(19)}║");
             Console.WriteLine($"║ 技能数量:   {jineng.ToString().PadRight(19)}║");
             Console.WriteLine("╠════════════════════════════════╣");
-            Console.WriteLine("║          技能展示              ║");
+            Console.WriteLine("             武学              ");
             Console.WriteLine("╠════════════════════════════════╣");
-            Console.WriteLine($"║ 技能1:  {jineng1.PadRight(15)}║");
-            Console.WriteLine($"║ 描述:   {miaoshu1.ToString().PadRight(19)}║");
-            Console.WriteLine($"║ 技能2:  {jineng2.PadRight(15)}║");
-            Console.WriteLine($"║ 描述:   {miaoshu2.ToString().PadRight(19)}║");
+            Console.WriteLine($" ║剑法: {jineng1.PadRight(15)}║");
+            Console.WriteLine($" ║描述: {miaoshu1.ToString().PadRight(19)}║");
+            Console.WriteLine($" ║身法: {jineng2.PadRight(15)}║");
+            Console.WriteLine($" ║描述: {miaoshu2.ToString().PadRight(19)}║");
             Console.WriteLine("╚════════════════════════════════╝");
             Console.WriteLine();
             Console.WriteLine("任意键继续......");
@@ -246,7 +246,7 @@ namespace wodekongjian     //命名空间
             //Console.WriteLine($"血量:       {xueliang}  ║");
             //Console.WriteLine($"技能数量:   {jineng}  ║");
             //Console.WriteLine("╔══════════════════════════╗");
-            //Console.WriteLine("║         技能展示         ║");
+            //Console.WriteLine("║           武学         ║");
             //Console.WriteLine("╚══════════════════════════╝");
             //Console.WriteLine($"技能1:      {jineng1}  ║");
             //Console.WriteLine($"伤害:       {jineng1gongji}  ║");
