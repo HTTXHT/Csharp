@@ -8,88 +8,51 @@ namespace wodekongjian     //命名空间
         static void Main()    //函数，方法
         {
             Console.WriteLine("月黑风高杀人夜");
-            Console.WriteLine("请按任意键继续");
+            Console.WriteLine("按任意键继续……");
             Console.ReadKey();
             Console.WriteLine();
 
             Console.WriteLine("江湖路远无归客。");
-            Console.WriteLine("请按任意键继续");
+            Console.WriteLine("按任意键继续……");
             Console.ReadKey();
             Console.WriteLine();
 
             Console.WriteLine("少侠，你好！");
-            Console.WriteLine("请按任意键继续");
+            Console.WriteLine("按任意键继续……");
             Console.ReadKey();
             Console.WriteLine();
 
-            Console.WriteLine("请输入性别：");
-            string xingbie = Console.ReadLine();
-
-            while (string.IsNullOrWhiteSpace(xingbie) || (xingbie != "男" && xingbie != "女"))
+            while (true) 
             {
-                Console.WriteLine("请正确输入性别（男/女)：");
-                xingbie = Console.ReadLine();
-                Console.WriteLine();
-            }
+                Console.WriteLine("请输入性别：");
+                string xingbie = Console.ReadLine();
 
-            if (xingbie == "男")
-            {
-                //不同类型下的实例，实例化
-                //Hero实例1
-                Hero hr1 = new Hero();
-                Console.WriteLine("请输入名称：");
-                hr1.mingzi = Console.ReadLine();
-
-                while (string.IsNullOrWhiteSpace(hr1.mingzi))
+                while (string.IsNullOrWhiteSpace(xingbie) || (xingbie != "男" && xingbie != "女"))
                 {
-                    Console.WriteLine("请正确输入名称：");
-                    hr1.mingzi = Console.ReadLine();
+                    Console.WriteLine("请正确输入性别（男/女)：");
+                    xingbie = Console.ReadLine();
+                    Console.WriteLine();
                 }
 
-                Console.WriteLine();
-                Console.WriteLine("原来你就是传说中的" + hr1.mingzi + "大侠！");
-                hr1.ShowGeneratingShux(xingbie);
-
-                //hr1.xingbie = "男";
-                //hr1.nianling = 18;
-                //hr1.shenggao = 175;
-                //hr1.gongji = 10;
-                //hr1.xueliang = 100;
-                //hr1.jineng1 = "飞沙走石";
-                //hr1.jineng1gongji = 20;
-                //hr1.jineng2 = "千里冰封";
-                //hr1.jineng2gongji = 50;
-
-                //hr1.ShowInfo();
-            }
-            else if (xingbie == "女")
-            {
-                
-                Hero hr2 = new Hero();
-                Console.WriteLine("请输入名称：");
-                hr2.mingzi = Console.ReadLine();
-
-                while (string.IsNullOrWhiteSpace(hr2.mingzi))
+                if (xingbie == "男")
                 {
-                    Console.WriteLine("请正确输入名称：");
-                    hr2.mingzi = Console.ReadLine();
+                    //不同类型下的实例，实例化
+                    //Hero实例1
+                    Hero hr1 = new Hero();
+                    hr1.ShowGeneratingShux(xingbie);
+
                 }
+                else if (xingbie == "女")
+                {
 
-                Console.WriteLine("原来你就是" + hr2.mingzi + "大侠！");
-                hr2.ShowGeneratingShux(xingbie);
-                //hr2.xingbie = "女";
-                //hr2.nianling = 18;
-                //hr2.shenggao = 165;
-                //hr2.gongji = 10;
-                //hr2.xueliang = 100;
-                //hr2.jineng1 = "天山折梅手";
-                //hr2.jineng1gongji = 30;
-                //hr2.jineng2 = "       ";
-                //hr2.jineng2gongji = 70;
+                    Hero hr2 = new Hero();
+                    hr2.ShowGeneratingShux(xingbie);
 
-                //hr2.ShowInfo();
+                }
             }
         }
+           
+
     }
 
 
@@ -108,6 +71,17 @@ namespace wodekongjian     //命名空间
 
         public void ShowGeneratingShux(string xingbie)
         {
+            Console.WriteLine("请输入名称：");
+            mingzi = Console.ReadLine();
+
+            while (string.IsNullOrWhiteSpace(mingzi))
+            {
+                Console.WriteLine("请正确输入名称：");
+                mingzi = Console.ReadLine();
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("原来你就是传说中的" + mingzi + "大侠！");
 
             if (xingbie == "男")
             {
@@ -136,15 +110,13 @@ namespace wodekongjian     //命名空间
                 jineng2gongji = 70;
                 ShowInfo( xingbie);
             }
-
-
-
+            
         }
 
         public void ShowInfo(string xingbie)
         {
 
-            Console.WriteLine("请按任意键查看属性");
+            Console.WriteLine("按任意键查看属性");
             Console.ReadKey();
             Console.WriteLine();
 
@@ -161,12 +133,12 @@ namespace wodekongjian     //命名空间
             Console.WriteLine("         技能             ");
             Console.WriteLine("────────────────────────────");
             Console.WriteLine($" 技能1:      {jineng1}");
-            Console.WriteLine($" 技能1攻击力: {jineng1gongji}");
+            Console.WriteLine($" 伤害: {jineng1gongji}");
             Console.WriteLine($" 技能2:      {jineng2}");
-            Console.WriteLine($" 技能2攻击力: {jineng2gongji}");
+            Console.WriteLine($" 伤害: {jineng2gongji}");
             Console.WriteLine("────────────────────────────");
 
-            Console.WriteLine("请按任意键继续");
+            Console.WriteLine("按任意键继续……");
             Console.ReadKey();
             Console.WriteLine();
         }
