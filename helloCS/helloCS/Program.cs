@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace helloCS     //命名空间
+namespace wodekongjian     //命名空间
 {
 
     class Program   //类型 
@@ -9,122 +9,53 @@ namespace helloCS     //命名空间
 
         static void Main()    //函数，方法
         {
-            int age = 0;
-            bool isCheck = true;
-            for (; isCheck;)
-            {
-                Console.WriteLine("请输入你的年龄：");
-                string str = Console.ReadLine();
-                try
-                { 
-                    age = int.Parse(str);
-                    isCheck = false ;
-                }
-                catch
-                {
-                    Console.WriteLine("格式有误，请正确输入年龄!!!");
-                    Console.WriteLine();
-                }            
-            }
+            Console.WriteLine("月黑风高杀人夜");
+            Console.WriteLine("请按任意键继续");
+            Console.ReadKey();
 
-            age = age + 10;
+            Console.WriteLine("江湖路远无归客。");
+            Console.WriteLine("请按任意键继续");
+            Console.ReadKey();
 
-            Console.WriteLine("请输入你的姓名：");
-            string name = Console.ReadLine();
-            Console.WriteLine();
+            Console.WriteLine("少侠，你好！");
+            Console.WriteLine("请按任意键继续");
+            Console.ReadKey();
 
-            Console.WriteLine("你的名字是：" + name);
-            Console.WriteLine("你十年后的年龄是：" + age);
+            Console.WriteLine("请输入名称：");
+            string  mingzi= Console.ReadLine();
+            Console.WriteLine("原来你就是传说中的" + mingzi + "大侠！");
+
+            Console.WriteLine("请按任意键继续");
+            Console.ReadKey();
+           
+            string xingbie = "男";
+            int  nianling = "18";
+            int shenggao = "175";
+            int gongji = "10";
+            int xueliang = "100";
+            string jineng1 = "飞沙走石";
+            int jineng1gongji = "20";
+            string jineng2 = "千里冰封";
+            int jineng2gongji = "50";
+
+            Console.WriteLine("属性面板");
+            Console.WriteLine( "性别:" + xingbie);
+            Console.WriteLine("年龄:" + nianling);
+            Console.WriteLine("身高:" + shenggao);
+            Console.WriteLine("攻击力:" + gongji);
+            Console.WriteLine("血量:" + xueliang);
+            Console.WriteLine("技能1:" + jineng1);
+            Console.WriteLine("技能1攻击力:" + jineng1gongji);
+            Console.WriteLine("技能2:" + jineng2);
+            Console.WriteLine("技能2攻击力:" + jineng2gongji);
+
+
+            Console.WriteLine("请按任意键继续");
             Console.ReadKey();
 
 
 
-
         }
 
-
-        //static void Main()    //函数，方法
-        //{
-        //    string name = "";
-        //    PanDuan(name);
-        //    Console.WriteLine("录入结束");
-        //}
-
-
-
-
-        static void PanDuan(string name)
-            {
-                for (; name != "姓名法外狂徒张三";)
-                {
-                    GetUserInfo(name);
-                    Console.WriteLine("继续下一个录入");
-                    Console.WriteLine();
-                    Console.WriteLine();
-                    Console.WriteLine();
-                }
-
-            }
-
-
-            static string GetUserInfo(string name)
-            {
-                //名称收集
-                Console.WriteLine("请输入你的姓名");
-                name = Console.ReadLine();
-
-                //家乡收集
-                Console.WriteLine("请输入你的故乡");
-                string address = Console.ReadLine();
-
-                //收集爱好
-                Console.WriteLine("请输入你的爱好");
-                string aihao = Console.ReadLine();
-                Console.WriteLine();
-
-
-                name = ChangeData(name);
-
-
-                //按格式输出
-                Console.WriteLine("故乡:" + address);
-                Console.WriteLine("爱好:" + aihao);
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine();
-
-                return name;
-
-
-            }
-
-
-
-
-            static string ChangeData(string name)
-            {
-                if (name == "张三")
-                {
-                    name = "法外狂徒张三";
-                    Console.WriteLine("姓名:" + name);
-                }
-                else if (name == "李四")
-                {
-                    name = "李四大傻逼";
-                    Console.WriteLine("姓名:" + name);
-                }
-                else
-                {
-                    Console.WriteLine("姓名:" + name);
-                }
-
-
-                return name;
-            }
-
-
-        }
     }
-
-
-
+}
