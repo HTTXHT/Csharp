@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace wodekongjian     //命名空间
 {
@@ -28,6 +26,7 @@ namespace wodekongjian     //命名空间
             //不同类型下的实例，实例化
             //Hero实例1
             Hero hr1 = new Hero();
+
             Console.WriteLine("请输入名称：");
             hr1.mingzi = Console.ReadLine();
 
@@ -127,9 +126,9 @@ namespace wodekongjian     //命名空间
     class Hero
     {
         public string mingzi;
-        public string xingbie ;
-        public int nianling ;
-        public int shenggao ;
+        public string xingbie;
+        public int nianling;
+        public int shenggao;
         public int gongji;
         public int xueliang;
         public string jineng1;
@@ -137,7 +136,7 @@ namespace wodekongjian     //命名空间
         public string jineng2;
         public int jineng2gongji;
 
-        
+
     }
 
 
