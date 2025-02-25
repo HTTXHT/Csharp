@@ -39,8 +39,9 @@ namespace wodekongjian     //命名空间
             Console.WriteLine();
             Console.WriteLine("原来你就是传说中的" + hr1.mingzi + "大侠！");
 
-            Console.ReadKey();
+            
             Console.WriteLine("请按任意键查看属性面板");
+            Console.ReadKey();
             Console.WriteLine();
 
             hr1.xingbie = "男";
@@ -54,21 +55,22 @@ namespace wodekongjian     //命名空间
             hr1.jineng2gongji = 50;
 
 
-            Console.WriteLine("┌────────────────────────────┐");
-            Console.WriteLine("│        属性面板            │");
-            Console.WriteLine("├────────────────────────────┤");
-            Console.WriteLine($"│ 姓名:       {hr1.mingzi}          │");
-            Console.WriteLine($"│ 性别:       {hr1.xingbie}          │");
-            Console.WriteLine($"│ 年龄:       {hr1.nianling}          │");
-            Console.WriteLine($"│ 身高:       {hr1.shenggao}          │");
-            Console.WriteLine($"│ 攻击力:     {hr1.gongji}          │");
-            Console.WriteLine($"│ 血量:       {hr1.xueliang}          │");
-            Console.WriteLine($"│ 技能1:      {hr1.jineng1}      │");
-            Console.WriteLine($"│ 技能1攻击力: {hr1.jineng1gongji}         │");
-            Console.WriteLine($"│ 技能2:      {hr1.jineng2}      │");
-            Console.WriteLine($"│ 技能2攻击力: {hr1.jineng2gongji}         │");
-            Console.WriteLine("└────────────────────────────┘");
+            //Console.WriteLine("┌────────────────────────────┐");
+            //Console.WriteLine("│        属性面板            │");
+            //Console.WriteLine("├────────────────────────────┤");
+            //Console.WriteLine($"│ 姓名:       {hr1.mingzi}          │");
+            //Console.WriteLine($"│ 性别:       {hr1.xingbie}          │");
+            //Console.WriteLine($"│ 年龄:       {hr1.nianling}          │");
+            //Console.WriteLine($"│ 身高:       {hr1.shenggao}          │");
+            //Console.WriteLine($"│ 攻击力:     {hr1.gongji}          │");
+            //Console.WriteLine($"│ 血量:       {hr1.xueliang}          │");
+            //Console.WriteLine($"│ 技能1:      {hr1.jineng1}      │");
+            //Console.WriteLine($"│ 技能1攻击力: {hr1.jineng1gongji}         │");
+            //Console.WriteLine($"│ 技能2:      {hr1.jineng2}      │");
+            //Console.WriteLine($"│ 技能2攻击力: {hr1.jineng2gongji}         │");
+            //Console.WriteLine("└────────────────────────────┘");
 
+            hr1.ShowInfo();
 
             Console.WriteLine("请按任意键继续");
             Console.ReadKey();
@@ -89,6 +91,10 @@ namespace wodekongjian     //命名空间
             Console.WriteLine("原来你就是" + hr2.mingzi + "大侠！");
 
 
+            Console.WriteLine("请按任意键查看属性面板");
+            Console.ReadKey();
+            Console.WriteLine();
+
             hr2.xingbie = "女";
             hr2.nianling = 18;
             hr2.shenggao = 165;
@@ -99,21 +105,22 @@ namespace wodekongjian     //命名空间
             hr2.jineng2 = "       ";
             hr2.jineng2gongji = 70;
 
-            Console.WriteLine("┌────────────────────────────┐");
-            Console.WriteLine("│        属性面板            │");
-            Console.WriteLine("├────────────────────────────┤");
-            Console.WriteLine($"│ 姓名:       {hr2.mingzi}          │");
-            Console.WriteLine($"│ 性别:       {hr2.xingbie}          │");
-            Console.WriteLine($"│ 年龄:       {hr2.nianling}          │");
-            Console.WriteLine($"│ 身高:       {hr2.shenggao}          │");
-            Console.WriteLine($"│ 攻击力:     {hr2.gongji}          │");
-            Console.WriteLine($"│ 血量:       {hr2.xueliang}          │");
-            Console.WriteLine($"│ 技能1:      {hr2.jineng1}      │");
-            Console.WriteLine($"│ 技能1攻击力: {hr2.jineng1gongji}         │");
-            Console.WriteLine($"│ 技能2:      {hr2.jineng2}      │");
-            Console.WriteLine($"│ 技能2攻击力: {hr2.jineng2gongji}         │");
-            Console.WriteLine("└────────────────────────────┘");
+            //Console.WriteLine("┌────────────────────────────┐");
+            //Console.WriteLine("│        属性面板            │");
+            //Console.WriteLine("├────────────────────────────┤");
+            //Console.WriteLine($"│ 姓名:       {hr2.mingzi}          │");
+            //Console.WriteLine($"│ 性别:       {hr2.xingbie}          │");
+            //Console.WriteLine($"│ 年龄:       {hr2.nianling}          │");
+            //Console.WriteLine($"│ 身高:       {hr2.shenggao}          │");
+            //Console.WriteLine($"│ 攻击力:     {hr2.gongji}          │");
+            //Console.WriteLine($"│ 血量:       {hr2.xueliang}          │");
+            //Console.WriteLine($"│ 技能1:      {hr2.jineng1}      │");
+            //Console.WriteLine($"│ 技能1攻击力: {hr2.jineng1gongji}         │");
+            //Console.WriteLine($"│ 技能2:      {hr2.jineng2}      │");
+            //Console.WriteLine($"│ 技能2攻击力: {hr2.jineng2gongji}         │");
+            //Console.WriteLine("└────────────────────────────┘");
 
+            hr2.ShowInfo();
 
             Console.WriteLine("请按任意键继续");
             Console.ReadKey();
@@ -135,6 +142,33 @@ namespace wodekongjian     //命名空间
         public int jineng1gongji;
         public string jineng2;
         public int jineng2gongji;
+
+
+
+        public void ShowInfo()
+        {
+
+
+            Console.WriteLine("────────────────────────────");
+            Console.WriteLine("        属性面板            ");
+            Console.WriteLine("────────────────────────────");
+            Console.WriteLine($" 姓名:       {mingzi}");
+            Console.WriteLine($" 性别:       {xingbie}");
+            Console.WriteLine($" 年龄:       {nianling}");
+            Console.WriteLine($" 身高:       {shenggao}");
+            Console.WriteLine($" 攻击力:     {gongji}");
+            Console.WriteLine($" 血量:       {xueliang}");
+            Console.WriteLine("────────────────────────────");
+            Console.WriteLine("         技能             ");
+            Console.WriteLine("────────────────────────────");
+            Console.WriteLine($" 技能1:      {jineng1}");
+            Console.WriteLine($" 技能1攻击力: {jineng1gongji}");
+            Console.WriteLine($" 技能2:      {jineng2}");
+            Console.WriteLine($" 技能2攻击力: {jineng2gongji}");
+            Console.WriteLine("────────────────────────────");
+
+
+        }
 
 
     }
