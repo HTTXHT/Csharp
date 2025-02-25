@@ -43,7 +43,7 @@ namespace wodekongjian     //命名空间
                 "你是一名初入江湖的年轻侠客，名为凌风，自幼习武，心怀侠义。" +
                 "某日，你在一次偶然的机会下，得到了一张残缺的藏宝图，图中隐约指向宿命之刃的下落。" +
                 "然而，你并不知道，这张藏宝图背后隐藏着一个巨大的阴谋。" +
-                "江湖中早已有人暗中布局，意图借宿命之刃的力量一统武林。而你，正是这场阴谋中的关键一环------”";
+                "江湖中早已有人暗中布局，意图借宿命之刃的力量一统武林。而你，正是这场阴谋中的关键一环......”";
             string story2 = 
                 "\r\n\r\n游戏开始：" +
                 "\r\n你站在一座破旧的古庙前，手中握着那张残破的藏宝图，耳边传来风声，仿佛在低语着未知的命运。" +
@@ -139,8 +139,8 @@ namespace wodekongjian     //命名空间
                 gongji = 10;
                 xueliang = 100;
                 jineng = 2;
-                jineng1 = "「天雷破岳」（拳法）";
-                miaoshu1 = "";
+                jineng1 = "「天雷破岳」（剑法）";
+                miaoshu1 = "内力凝聚于剑尖，如天雷般狂暴，一剑劈下，山岳为之震颤";
                 jineng2 = "「幽冥无影」（身法）";
                 miaoshu2 = "身形飘忽不定，剑招无影无形。";
                 ShowInfo(xingbie);
@@ -211,7 +211,7 @@ namespace wodekongjian     //命名空间
             Console.WriteLine("╔════════════════════════════════╗");
             Console.WriteLine("║            属性面板            ║");
             Console.WriteLine("╠════════════════════════════════╣");
-            Console.WriteLine($"║ 大侠:       {mingzi.PadRight(18)}║");
+            Console.WriteLine($"║ 大侠:       {mingzi.PadRight(16)}║");
             Console.WriteLine($"║ 性别:       {xingbie.PadRight(18)}║");
             Console.WriteLine($"║ 年龄:       {nianling.ToString().PadRight(19)}║");
             Console.WriteLine($"║ 身高:       {shenggao.ToString().PadRight(19)}║");
@@ -221,10 +221,10 @@ namespace wodekongjian     //命名空间
             Console.WriteLine("╠════════════════════════════════╣");
             Console.WriteLine("║          技能展示              ║");
             Console.WriteLine("╠════════════════════════════════╣");
-            Console.WriteLine($"║ 技能1:      {jineng1.PadRight(15)}║");
-            Console.WriteLine($"║ 伤害:       {miaoshu1.ToString().PadRight(19)}║");
-            Console.WriteLine($"║ 技能2:      {jineng2.PadRight(15)}║");
-            Console.WriteLine($"║ 伤害:       {miaoshu2.ToString().PadRight(19)}║");
+            Console.WriteLine($"║ 技能1:  {jineng1.PadRight(15)}║");
+            Console.WriteLine($"║ 描述:   {miaoshu1.ToString().PadRight(19)}║");
+            Console.WriteLine($"║ 技能2:  {jineng2.PadRight(15)}║");
+            Console.WriteLine($"║ 描述:   {miaoshu2.ToString().PadRight(19)}║");
             Console.WriteLine("╚════════════════════════════════╝");
             Console.WriteLine();
             Console.WriteLine("任意键继续......");
