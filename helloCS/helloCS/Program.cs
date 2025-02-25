@@ -21,7 +21,7 @@ namespace wodekongjian     //命名空间
         {
             int windowWidth = Console.WindowWidth;
             string story01 = " 0%-";
-            string story02 = "------------------…";
+            string story02 = "-----------------";
             string story03 = "------";
             string story04 = "------------------------------------100% ";
 
@@ -30,11 +30,11 @@ namespace wodekongjian     //命名空间
             int remainingLength = windowWidth - totalLength;
 
             // 平均分配剩余的长度到每个字符串
-            int extraLengthPerString = remainingLength / 4;
+            int extraLengthPerString = remainingLength / 3;
             story01 = story01.PadRight(story01.Length + extraLengthPerString, '-');
             story02 = story02.PadRight(story02.Length + extraLengthPerString, '-');
             story03 = story03.PadRight(story03.Length + extraLengthPerString, '-');
-            story04 = story04.PadRight(story04.Length + extraLengthPerString, '-');
+           
                                                                             
 
             string story1 = "\r\n\r\n“江湖传闻，百年前，一代剑神“无影剑”独孤绝留下一柄绝世神剑——“宿命之刃”，" +
@@ -51,16 +51,16 @@ namespace wodekongjian     //命名空间
                 "是追寻宿命之刃的力量，还是揭开背后的阴谋，守护江湖的和平？" +
                 "\r\n\r\n";
             
-            PrintSlowly(story01,300);
-            PrintSlowly(story02, 100);
-            PrintSlowly(story03, 350);
-            PrintSlowly(story04, 50);
+            PrintSlowly(story01,100);
+            PrintSlowly(story02, 40);
+            PrintSlowly(story03, 120);
+            PrintSlowly(story04, 20);
             PrintSlowly(story1,50);
             Console.WriteLine();
-            Console.WriteLine("\n任意键继续------");
+            Console.WriteLine("\n任意键继续......");
             Console.ReadKey();
             PrintSlowly(story2,50);
-            Console.WriteLine("\n任意键继续------");
+            Console.WriteLine("\n任意键继续......");
             Console.ReadKey();
             Console.WriteLine();
         }
@@ -123,9 +123,9 @@ namespace wodekongjian     //命名空间
         public int xueliang;
         public int jineng;
         public string jineng1;
-        public int jineng1gongji;
+        public string miaoshu1;
         public string jineng2;
-        public int jineng2gongji;
+        public string miaoshu2;
 
         //生成属性值
         public void ShowGeneratingShux(string xingbie)
@@ -139,10 +139,10 @@ namespace wodekongjian     //命名空间
                 gongji = 10;
                 xueliang = 100;
                 jineng = 2;
-                jineng1 = "飞沙走石";
-                jineng1gongji = 20;
-                jineng2 = "千里冰封";
-                jineng2gongji = 50;
+                jineng1 = "「天雷破岳」（拳法）";
+                miaoshu1 = "";
+                jineng2 = "「幽冥无影」（身法）";
+                miaoshu2 = "身形飘忽不定，剑招无影无形。";
                 ShowInfo(xingbie);
             }
             else if (xingbie == "女")
@@ -153,10 +153,10 @@ namespace wodekongjian     //命名空间
                 gongji = 10;
                 xueliang = 100;
                 jineng = 2;
-                jineng1 = "天山折梅手";
-                jineng1gongji = 30;
-                jineng2 = "九阴白骨爪";
-                jineng2gongji = 70;
+                jineng1 = "「月华倾天」（剑法）";
+                miaoshu1 = "剑光如月华洒落，清冷而凌厉,连绵不绝，如月笼地";
+                jineng2 = "「蝶舞翩跹」（身法）";
+                miaoshu2 = "身姿如彩蝶飞舞，轻盈灵动，步法优雅而难以捉摸";
                 ShowInfo(xingbie);
             }
 
@@ -181,6 +181,7 @@ namespace wodekongjian     //命名空间
             Console.WriteLine(  mingzi + "少侠，" + "欢迎来到《剑影江湖：宿命之刃》");
             Console.WriteLine();
             Console.WriteLine("你准好了吗？");
+            Console.WriteLine();
 
         }
         //public void MingZi()
@@ -221,12 +222,12 @@ namespace wodekongjian     //命名空间
             Console.WriteLine("║          技能展示              ║");
             Console.WriteLine("╠════════════════════════════════╣");
             Console.WriteLine($"║ 技能1:      {jineng1.PadRight(15)}║");
-            Console.WriteLine($"║ 伤害:       {jineng1gongji.ToString().PadRight(19)}║");
+            Console.WriteLine($"║ 伤害:       {miaoshu1.ToString().PadRight(19)}║");
             Console.WriteLine($"║ 技能2:      {jineng2.PadRight(15)}║");
-            Console.WriteLine($"║ 伤害:       {jineng2gongji.ToString().PadRight(19)}║");
+            Console.WriteLine($"║ 伤害:       {miaoshu2.ToString().PadRight(19)}║");
             Console.WriteLine("╚════════════════════════════════╝");
             Console.WriteLine();
-            Console.WriteLine("按任意键继续------");
+            Console.WriteLine("任意键继续......");
             Console.WriteLine();
             Console.ReadKey();
 
