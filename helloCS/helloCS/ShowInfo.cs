@@ -4,12 +4,15 @@ namespace helloCS
 {
     class ShowInfo
     {
+        
         //查看角色面板
         public static void ShowHeroInfo(Hero hero, string xingbie)
         {
-            Console.WriteLine("任意键查看角色面板");
+            string tishi = "\n任意键继续......";
+            string tishi2 = "任意键查看角色面板";
+            Console.WriteLine(tishi2);
             Console.ReadKey();
-
+            Program.DeleteLastLine(tishi2.Length);
             // 角色面板
             PrintPanelLine("╔════════════════════════════════╗");
             PrintPanelLine("║            角色面板            ║");
@@ -23,12 +26,12 @@ namespace helloCS
             PrintPanelLine($"║ 技能数量:   {hero.jineng.ToString().PadRight(19)}║");
             PrintPanelLine("╚════════════════════════════════╝");
 
-            Console.WriteLine(" 武学" + "\r\n");
+            Console.WriteLine(" 武学" + "\n\r");
             PrintSkill("剑法", hero.jineng1, hero.miaoshu1);
             PrintSkill("身法", hero.jineng2, hero.miaoshu2);
-            Console.WriteLine();
-            Console.WriteLine("任意键继续......");
+            Console.WriteLine(tishi);
             Console.ReadKey();
+            Program.DeleteLastLine(tishi.Length);
         }
 
         // 打印面板行

@@ -1,5 +1,5 @@
 ﻿using System;
-using wodekongjian;
+
 
 namespace helloCS
 {
@@ -39,9 +39,9 @@ namespace helloCS
             Console.WriteLine();
             Console.WriteLine();
             string story3 = "“一剑风云起，孤影踏江湖；" +
-                "\r\n\r\n      宿命藏锋处，侠心照千古。”" +
-                "\r\n\r\n" + mingzi + " 少侠， " + "欢迎来到《剑影江湖：宿命之刃》";
-            string story4 = "\r\n\r\n" + " 你准好了吗？" + "\r\n\r\n";
+                "\n\r\n\r      宿命藏锋处，侠心照千古。”" +
+                "\n\r\n\r" + mingzi + " 少侠， " + "欢迎来到《剑影江湖：宿命之刃》";
+            string story4 = "\n\r\n\r" + " 你准好了吗？" + "\n\r\n\r";
 
             Program.PrintSlowlyWithSpaceCheck(story3, 50);
             Program.PrintSlowlyWithSpaceCheck(story4, 200);
@@ -61,7 +61,7 @@ namespace helloCS
                 jineng1 = "「天雷破岳」";
                 miaoshu1 = "内力流转凝聚，剑如天雷破山岳";
                 jineng2 = "「幽冥无影」";
-                miaoshu2 = "身形飘忽不定，剑招无影无形。";
+                miaoshu2 = "身形飘忽不定，剑招无影无形";
             }
             else if (xingbie == "女")
             {

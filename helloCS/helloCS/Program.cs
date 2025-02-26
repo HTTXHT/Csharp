@@ -2,21 +2,23 @@
 using System;
 using System.Threading;
 
-namespace wodekongjian     //命名空间
+namespace helloCS   //命名空间
 {
 
     class Program   //类型 
     {
         static void Main()    //函数，方法
         {
-            Background();
+            string tishi = "任意键继续......";
+
+            Background(tishi);
 
             CharacterCreation();
 
         }
 
         // 故事背景
-        static void Background()
+        static void Background(string tishi)
         {
             int windowWidth = Console.WindowWidth;
             string story01 = " 0%-";
@@ -34,41 +36,41 @@ namespace wodekongjian     //命名空间
             story02 = story02.PadRight(story02.Length + extraLengthPerString, '-');
             story03 = story03.PadRight(story03.Length + extraLengthPerString, '-');
 
-
-
             string story1 =
-                "\r\n\r\n“江湖传闻，百年前，一代剑神“无影剑”独孤绝留下一柄绝世神剑——“宿命之刃”，" +
+                "\n\r\n\r“江湖传闻，百年前，一代剑神“无影剑”独孤绝留下一柄绝世神剑——“宿命之刃”，" +
                 "传说得此剑者可号令天下，无人能敌。然而，独孤绝在剑成之日便神秘消失，宿命之刃也随之不知所踪。" +
-                "\r\n\r\n" + "百年之后，江湖风云再起，各大门派为争夺宿命之刃，暗流涌动。" +
+                "\n\r\n\r" + "百年之后，江湖风云再起，各大门派为争夺宿命之刃，暗流涌动。" +
                 "你是一名初入江湖的年轻侠客，名为凌风，自幼习武，心怀侠义。" +
                 "某日，你在一次偶然的机会下，得到了一张残缺的藏宝图，图中隐约指向宿命之刃的下落。" +
                 "然而，你并不知道，这张藏宝图背后隐藏着一个巨大的阴谋。" +
-                "江湖中早已有人暗中布局，意图借宿命之刃的力量一统武林。而你，正是这场阴谋中的关键一环......”";
+                "江湖中早已有人暗中布局，意图借宿命之刃的力量一统武林。而你，正是这场阴谋中的关键一环......”" +
+                "\n\r\n\r";
             string story2 =
-                "\r\n\r\n游戏开始：" +
-                "\r\n你站在一座破旧的古庙前，手中握着那张残破的藏宝图，耳边传来风声，仿佛在低语着未知的命运。" +
+                "你站在一座破旧的古庙前，手中握着那张残破的藏宝图，耳边传来风声，仿佛在低语着未知的命运。" +
                 "前方的路充满危险与机遇，而你，将如何选择？" +
-                "是追寻宿命之刃的力量，还是揭开背后的阴谋，守护江湖的和平？" +
-                "\r\n\r\n";
+                "是追寻宿命之刃的力量，还是揭开背后的阴谋，守护江湖的和平？"+
+                "\n\r\n\r";
 
             PrintSlowly(story01, 100);
             PrintSlowly(story02, 40);
             PrintSlowly(story03, 120);
             PrintSlowly(story04, 20);
 
+
             //PrintSlowly(story1, 50);
             PrintSlowlyWithSpaceCheck(story1, 100);
-            Console.WriteLine();
-            Console.WriteLine("\n任意键继续......");
+            Console.WriteLine(tishi);
             Console.ReadKey();
+            DeleteLastLine(tishi.Length);
 
             //PrintSlowly(story2, 50);
-            PrintSlowlyWithSpaceCheck(story2, 100);
-            Console.WriteLine("\n任意键继续......");
+            PrintSlowlyWithSpaceCheck(story2, 50);
+            Console.WriteLine(tishi);
             Console.ReadKey();
-            Console.WriteLine();
-
+            DeleteLastLine(tishi.Length);
         }
+        
+        
         // 逐个字母打印，并检查空格键
         public static void PrintSlowlyWithSpaceCheck(string text, int delay)
         {
@@ -127,9 +129,14 @@ namespace wodekongjian     //命名空间
             }
         }
 
-    }
+        // 删除控制台字符
+        public static void DeleteLastLine(int length)
+        {
+            int cursorTop = Console.CursorTop;
+            //Console.SetCursorPosition(0, cursorTop - 1);
+            Console.Write(new string(' ', length));
+            Console.SetCursorPosition(0, cursorTop - 1);
+        }
 
-    
-    //角色类
-   
+    }
 }
