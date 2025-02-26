@@ -16,8 +16,6 @@ namespace wodekongjian     //命名空间
 
         }
 
-
-
         // 故事背景
         static void Background()
         {
@@ -27,7 +25,7 @@ namespace wodekongjian     //命名空间
             string story03 = "------";
             string story04 = "------------------------------------100% ";
 
-            // 计算每个字符串的长度，使它们加起来正好占满控制台窗口的宽度
+            // 计算字符串的长度，加起来正好占满控制台窗口的宽度
             int totalLength = story01.Length + story02.Length + story03.Length + story04.Length;
             int remainingLength = windowWidth - totalLength;
 
@@ -73,7 +71,7 @@ namespace wodekongjian     //命名空间
 
         }
         // 逐个字母打印，并检查空格键
-        static void PrintSlowlyWithSpaceCheck(string text, int delay)
+        public static void PrintSlowlyWithSpaceCheck(string text, int delay)
         {
             foreach (char c in text)
             {
@@ -88,7 +86,7 @@ namespace wodekongjian     //命名空间
         }
 
         // 逐个字母打印
-        static void PrintSlowly(string text, int delay)
+        public static void PrintSlowly(string text, int delay)
         {
             foreach (char c in text)
             {
@@ -96,7 +94,6 @@ namespace wodekongjian     //命名空间
                 Thread.Sleep(delay);
             }
         }
-
 
         //创建角色
         static void CharacterCreation()
@@ -118,14 +115,14 @@ namespace wodekongjian     //命名空间
                     //不同类型下的实例，实例化
                     //Hero实例1
                     Hero hr1 = new Hero();
-                    hr1.ShowGeneratingShux(hr1,xingbie);
+                    hr1.ShowGeneratingShux(hr1, xingbie);
 
                 }
                 else if (xingbie == "女")
                 {
 
                     Hero hr2 = new Hero();
-                    hr2.ShowGeneratingShux(hr2,xingbie);
+                    hr2.ShowGeneratingShux(hr2, xingbie);
 
                 }
             }
@@ -133,133 +130,7 @@ namespace wodekongjian     //命名空间
 
     }
 
-
+    
     //角色类
-    class Hero
-    {
-        //角色属性
-        public string mingzi;
-        public int nianling;
-        public int shenggao;
-        public int gongji;
-        public int xueliang;
-        public int jineng;
-        public string jineng1;
-        public string miaoshu1;
-        public string jineng2;
-        public string miaoshu2;
-
-        //生成属性值
-        public void ShowGeneratingShux(Hero hero,string xingbie)
-        {
-            MingZi();
-            if (xingbie == "男")
-            {
-                xingbie = "男";
-                nianling = 18;
-                shenggao = 175;
-                gongji = 10;
-                xueliang = 100;
-                jineng = 2;
-                jineng1 = "「天雷破岳」";
-                miaoshu1 = "内力流转凝聚，剑如天雷破山岳";
-                jineng2 = "「幽冥无影」";
-                miaoshu2 = "身形飘忽不定，剑招无影无形。";
-                ShowInfo.ShowHeroInfo(hero,xingbie);
-            }
-            else if (xingbie == "女")
-            {
-                xingbie = "女";
-                nianling = 18;
-                shenggao = 165;
-                gongji = 10;
-                xueliang = 100;
-                jineng = 2;
-                jineng1 = "「月华倾天」";
-                miaoshu1 = "剑光如月华洒落，清冷而凌厉,连绵不绝，如月笼地";
-                jineng2 = "「蝶舞翩跹」";
-                miaoshu2 = "身姿如彩蝶飞舞，轻盈灵动，步法优雅而难以捉摸";
-                ShowInfo.ShowHeroInfo(hero,xingbie);
-            }
-
-        }
-
-        //注册
-        //限制昵称长度为一个字
-        public void MingZi()
-        {
-            Console.WriteLine("请输入昵称（一个字）：");
-            mingzi = Console.ReadLine();
-
-
-            while (string.IsNullOrWhiteSpace(mingzi) || mingzi.Length > 1)
-            {
-                Console.WriteLine("请正确输入昵称（一个字）：");
-                mingzi = Console.ReadLine();
-            }
-            mingzi += "（凌风)";
-            Console.WriteLine();
-            Console.WriteLine();
-            string story3 = "“一剑风云起，孤影踏江湖；" +
-                "\r\n\r\n      宿命藏锋处，侠心照千古。”" +
-                "\r\n\r\n" + mingzi + " 少侠， " + "欢迎来到《剑影江湖：宿命之刃》";
-            string story4 = "\r\n\r\n" + " 你准好了吗？" + "\r\n\r\n";
-
-            PrintSlowly(story3, 50);
-            PrintSlowly(story4, 200);
-
-        }
-
-        static void PrintSlowly(string text, int delay)
-        {
-            foreach (char c in text)
-            {
-                Console.Write(c);
-                Thread.Sleep(delay);
-            }
-        }
-
-
-    }
-
-
-    class ShowInfo
-    {
-        //查看角色面板
-
-        public static void ShowHeroInfo(Hero hero, String xingbie)
-        {
-            Console.WriteLine("任意键查看个人面板");
-            Console.ReadKey();
-            Console.WriteLine("╔════════════════════════════════╗");
-            Console.WriteLine("║            属性面板            ║");
-            Console.WriteLine("╠════════════════════════════════╣");
-            Console.WriteLine($"║ 大侠:       {hero.mingzi.PadRight(15)}║");
-            Console.WriteLine($"║ 性别:       {xingbie.PadRight(18)}║");
-            Console.WriteLine($"║ 年龄:       {hero.nianling.ToString().PadRight(19)}║");
-            Console.WriteLine($"║ 身高:       {hero.shenggao.ToString().PadRight(19)}║");
-            Console.WriteLine($"║ 攻击:       {hero.gongji.ToString().PadRight(19)}║");
-            Console.WriteLine($"║ 血量:       {hero.xueliang.ToString().PadRight(19)}║");
-            Console.WriteLine($"║ 技能数量:   {hero.jineng.ToString().PadRight(19)}║");
-            Console.WriteLine("╚════════════════════════════════╝");
-
-
-
-            Console.WriteLine($" 武学                   ");
-            Console.WriteLine();
-            Console.WriteLine($" 剑法: {hero.jineng1}");
-            Console.WriteLine($" 描述: {hero.miaoshu1}");
-            Console.WriteLine($" 身法: {hero.jineng2}");
-            Console.WriteLine($" 描述: {hero.miaoshu2}");
-            Console.WriteLine();
-            Console.WriteLine();
-
-            Console.WriteLine("任意键继续......");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
-            Console.ReadKey();
-        }
-    }
+   
 }
