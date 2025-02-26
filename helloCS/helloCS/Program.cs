@@ -15,7 +15,7 @@ namespace wodekongjian     //命名空间
         }
 
 
-      
+
         // 故事背景
         static void Background()
         {
@@ -34,28 +34,31 @@ namespace wodekongjian     //命名空间
             story01 = story01.PadRight(story01.Length + extraLengthPerString, '-');
             story02 = story02.PadRight(story02.Length + extraLengthPerString, '-');
             story03 = story03.PadRight(story03.Length + extraLengthPerString, '-');
-           
-                                                                            
 
-            string story1 = "\r\n\r\n“江湖传闻，百年前，一代剑神“无影剑”独孤绝留下一柄绝世神剑——“宿命之刃”，" +
+
+
+            string story1 = "\r\n\r\n按空格键跳过" +
+                "\r\n\r\n“江湖传闻，百年前，一代剑神“无影剑”独孤绝留下一柄绝世神剑——“宿命之刃”，" +
                 "传说得此剑者可号令天下，无人能敌。然而，独孤绝在剑成之日便神秘消失，宿命之刃也随之不知所踪。" +
-                "\r\n\r\n" +"百年之后，江湖风云再起，各大门派为争夺宿命之刃，暗流涌动。" +
+                "\r\n\r\n" + "百年之后，江湖风云再起，各大门派为争夺宿命之刃，暗流涌动。" +
                 "你是一名初入江湖的年轻侠客，名为凌风，自幼习武，心怀侠义。" +
                 "某日，你在一次偶然的机会下，得到了一张残缺的藏宝图，图中隐约指向宿命之刃的下落。" +
                 "然而，你并不知道，这张藏宝图背后隐藏着一个巨大的阴谋。" +
                 "江湖中早已有人暗中布局，意图借宿命之刃的力量一统武林。而你，正是这场阴谋中的关键一环......”";
-            string story2 = 
+            string story2 =
                 "\r\n\r\n游戏开始：" +
                 "\r\n你站在一座破旧的古庙前，手中握着那张残破的藏宝图，耳边传来风声，仿佛在低语着未知的命运。" +
                 "前方的路充满危险与机遇，而你，将如何选择？" +
                 "是追寻宿命之刃的力量，还是揭开背后的阴谋，守护江湖的和平？" +
                 "\r\n\r\n";
-            
-            PrintSlowly(story01,100);
+
+            PrintSlowly(story01, 100);
             PrintSlowly(story02, 40);
             PrintSlowly(story03, 120);
             PrintSlowly(story04, 20);
-            PrintSlowly(story1,50);
+            //PrintSlowly(story1, 50);
+            PrintSlowlyWithSpaceCheck(story1, 100);
+
             Console.WriteLine();
             Console.WriteLine("\n任意键继续......");
             Console.ReadKey();
@@ -63,6 +66,28 @@ namespace wodekongjian     //命名空间
             Console.WriteLine("\n任意键继续......");
             Console.ReadKey();
             Console.WriteLine();
+            
+            if (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                PrintSlowly(story1,0); 
+            }
+
+
+
+        }
+        // 逐个字母打印，并检查空格键
+        static void PrintSlowlyWithSpaceCheck(string text, int delay)
+        {
+            foreach (char c in text)
+            {
+                if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Spacebar)
+                {
+                    Console.Write(text.Substring(text.IndexOf(c)));
+                    break;
+                }
+                Console.Write(c);
+                Thread.Sleep(delay);
+            }
         }
 
         // 逐个字母打印
@@ -175,7 +200,7 @@ namespace wodekongjian     //命名空间
                 Console.WriteLine("请正确输入昵称（一个字）：");
                 mingzi = Console.ReadLine();
             }
-            mingzi += "（凌）风";
+            mingzi += "（凌风)";
             Console.WriteLine();
             Console.WriteLine();
             string story3 = "“一剑风云起，孤影踏江湖；宿命藏锋处，侠心照千古。”" +
