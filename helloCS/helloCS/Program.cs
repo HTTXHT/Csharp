@@ -1,5 +1,4 @@
 ﻿using helloCS;
-using Microsoft.SqlServer.Server;
 using System;
 using System.Threading;
 

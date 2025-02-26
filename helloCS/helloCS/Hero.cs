@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using wodekongjian;
 
 namespace helloCS
 {
     class Hero
     {
-        //角色属性
         public string mingzi;
         public int nianling;
         public int shenggao;
@@ -20,49 +15,20 @@ namespace helloCS
         public string miaoshu1;
         public string jineng2;
         public string miaoshu2;
-
-        //生成属性值
+       
+        // 生成角色面板
         public void ShowGeneratingShux(Hero hero, string xingbie)
         {
             MingZi();
-            if (xingbie == "男")
-            {
-                xingbie = "男";
-                nianling = 18;
-                shenggao = 175;
-                gongji = 10;
-                xueliang = 100;
-                jineng = 2;
-                jineng1 = "「天雷破岳」";
-                miaoshu1 = "内力流转凝聚，剑如天雷破山岳";
-                jineng2 = "「幽冥无影」";
-                miaoshu2 = "身形飘忽不定，剑招无影无形。";
-                ShowInfo.ShowHeroInfo(hero, xingbie);
-            }
-            else if (xingbie == "女")
-            {
-                xingbie = "女";
-                nianling = 18;
-                shenggao = 165;
-                gongji = 10;
-                xueliang = 100;
-                jineng = 2;
-                jineng1 = "「月华倾天」";
-                miaoshu1 = "剑光如月华洒落，清冷而凌厉,连绵不绝，如月笼地";
-                jineng2 = "「蝶舞翩跹」";
-                miaoshu2 = "身姿如彩蝶飞舞，轻盈灵动，步法优雅而难以捉摸";
-                ShowInfo.ShowHeroInfo(hero, xingbie);
-            }
-
+            SetAttributes(xingbie);
+            ShowInfo.ShowHeroInfo(hero, xingbie);
         }
 
-        //注册
-        //限制昵称长度为一个字
+        // 角色注册，昵称长度为一个字
         public void MingZi()
         {
             Console.WriteLine("请输入昵称（一个字）：");
             mingzi = Console.ReadLine();
-
 
             while (string.IsNullOrWhiteSpace(mingzi) || mingzi.Length > 1)
             {
@@ -79,9 +45,37 @@ namespace helloCS
 
             Program.PrintSlowlyWithSpaceCheck(story3, 50);
             Program.PrintSlowlyWithSpaceCheck(story4, 200);
-
         }
 
 
+        // 设置属性值
+        private void SetAttributes(string xingbie)
+        {
+            if (xingbie == "男")
+            {
+                nianling = 18;
+                shenggao = 175;
+                gongji = 10;
+                xueliang = 100;
+                jineng = 2;
+                jineng1 = "「天雷破岳」";
+                miaoshu1 = "内力流转凝聚，剑如天雷破山岳";
+                jineng2 = "「幽冥无影」";
+                miaoshu2 = "身形飘忽不定，剑招无影无形。";
+            }
+            else if (xingbie == "女")
+            {
+                nianling = 18;
+                shenggao = 165;
+                gongji = 10;
+                xueliang = 100;
+                jineng = 2;
+                jineng1 = "「月华倾天」";
+                miaoshu1 = "剑光如月华洒落，清冷而凌厉,连绵不绝，如月笼地";
+                jineng2 = "「蝶舞翩跹」";
+                miaoshu2 = "身姿如彩蝶飞舞，轻盈灵动，步法优雅而难以捉摸";
+            }
+        }
     }
 }
+
