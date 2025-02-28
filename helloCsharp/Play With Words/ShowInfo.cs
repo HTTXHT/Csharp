@@ -9,7 +9,7 @@ namespace playWithWords
         public static void ShowHeroInfo(Hero hero, string xingbie)
         {
             string PTS1 = "\n任意键继续......";
-            string PTS12 = "任意键查看角色面板";
+            string PTS12 = "老乞丐：「看你小子挺顺眼，闲来无事，教你两招」"+"\n\r\n\r";
             Console.WriteLine(PTS12);
             Console.ReadKey();
             Program.DeleteLastLine(PTS12.Length);
@@ -25,8 +25,7 @@ namespace playWithWords
             PrintPanelLine($"║ 血量:       {hero.xueliang.ToString().PadRight(19)}║");
             PrintPanelLine($"║ 技能数量:   {hero.jineng.ToString().PadRight(19)}║");
             PrintPanelLine("╚════════════════════════════════╝");
-
-            Console.WriteLine(" 武学" + "\n\r");
+            Console.WriteLine("传承秘技" + "\n\r");
             PrintSkill("剑法", hero.jineng1, hero.miaoshu1);
             PrintSkill("身法", hero.jineng2, hero.miaoshu2);
             Console.WriteLine(PTS1);

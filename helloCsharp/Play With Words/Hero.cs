@@ -15,11 +15,11 @@ namespace playWithWords
         public string jineng2;
         public string miaoshu2;
 
-        string HTS1_1 = "「江湖风波起，浮萍终有名 —— 少侠可愿留个名号？」";
-        string HTS1_2 = "「萍水相逢即是缘，敢问姑娘芳名？」";
-        string HTS2 = "   「刀光剑影，快意恩仇，江湖路远，一字足矣。」   ";
-        string HTS3 = "「少侠眉宇间英气逼人，敢问已历几度春秋？」";
-        string HTS4 = "「老夫年轻时与你一般高挑……咳，少侠如今几尺几寸？」";
+        string HTS1_1 = "老乞丐：「江湖风波起，浮萍终有名 —— 少侠可愿留个名号？」                ";
+        string HTS1_2 = "老乞丐：「萍水相逢即是缘，敢问姑娘芳名？」                                ";
+        string HTS2 = "老乞丐：「刀光剑影，快意恩仇，江湖路远，一字足矣。」                        ";
+        string HTS3 = "老乞丐：「少侠眉宇间英气逼人，敢问已历几度春秋？ 」                         ";
+        string HTS4 = "老乞丐：「老夫年轻时与你一般高挑……咳，少侠如今几尺几寸？」                ";
         string HTS5 = "任意键继续......";
 
         private static Random random = new Random();
@@ -63,23 +63,15 @@ namespace playWithWords
                 Program.DeleteLastLine(HTS2.Length);
                 Program.DeleteLastLine(HTS2.Length);
             }
-            mingzi += "（凌风)";
-            //Console.WriteLine("“            一剑风云起，孤影踏江湖；            ");
-            string story3 = "“            一剑风云起，孤影踏江湖；            "+
-                "\n\r                  宿命藏锋处，侠心照千古。”            " +
-                "\n\r\n\r      " + mingzi + " 少侠， " + "欢迎来到《剑影江湖：宿命之刃》";
-            string story4 = "\n\r\n\r" + "       你准好了吗？" + "\n\r\n\r";
-
-            Program.PrintSlowlyWithSpaceCheck(story3, 50);
-            Program.PrintSlowlyWithSpaceCheck(story4, 200);
+          
         }
 
         // 设置属性值
         private void SetAttributes(string xingbie)
         {
-            Console.WriteLine(HTS5);
-            Console.ReadKey();
-            Program.DeleteLastLine(HTS3.Length);
+            //Console.WriteLine(HTS5);
+            //Console.ReadKey();
+            //Program.DeleteLastLine(HTS3.Length);
 
             //自定义年龄
             Console.WriteLine(HTS3);
@@ -96,6 +88,16 @@ namespace playWithWords
 
             gongji = random.Next(5, 16); // 随机生成5到15之间的攻击力
             xueliang = random.Next(80, 121); // 随机生成80到120之间的血量
+
+            mingzi += "（凌风)";
+            Console.WriteLine("             “一剑风云起，孤影踏江湖；                                    "
+                + "\n\r                    宿命藏锋处，侠心照千古。”               ");
+            string story3 =
+                "\n\r\n\r" + mingzi + " 少侠， " + "欢迎来到《剑影江湖：宿命之刃》";
+            string story4 = "\n\r\n\r" + "       你准好了吗？" + "\n\r\n\r";
+
+            Program.PrintSlowlyWithSpaceCheck(story3, 50);
+            Program.PrintSlowlyWithSpaceCheck(story4, 200);
 
             if (xingbie == "男")
             {
