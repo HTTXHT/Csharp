@@ -8,11 +8,11 @@ namespace playWithWords
         //查看角色面板
         public static void ShowHeroInfo(Hero hero, string xingbie)
         {
-            string tishi = "\n任意键继续......";
-            string tishi2 = "任意键查看角色面板";
-            Console.WriteLine(tishi2);
+            string PTS1 = "\n任意键继续......";
+            string PTS12 = "任意键查看角色面板";
+            Console.WriteLine(PTS12);
             Console.ReadKey();
-            Program.DeleteLastLine(tishi2.Length);
+            Program.DeleteLastLine(PTS12.Length);
             // 角色面板
             PrintPanelLine("╔════════════════════════════════╗");
             PrintPanelLine("║            角色面板            ║");
@@ -29,9 +29,9 @@ namespace playWithWords
             Console.WriteLine(" 武学" + "\n\r");
             PrintSkill("剑法", hero.jineng1, hero.miaoshu1);
             PrintSkill("身法", hero.jineng2, hero.miaoshu2);
-            Console.WriteLine(tishi);
+            Console.WriteLine(PTS1);
             Console.ReadKey();
-            Program.DeleteLastLine(tishi.Length);
+            Program.DeleteLastLine(PTS1.Length);
         }
 
         // 打印面板行

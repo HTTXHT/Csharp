@@ -8,32 +8,32 @@ namespace playWithWords   //命名空间
     {
         static void Main()    //函数，方法
         {
-            string tishi = "任意键继续......";
+            string PTS1 = "任意键继续......";
 
-            Background(tishi);
+            Background(PTS1);
 
             CharacterCreation();
 
         }
 
         // 故事背景
-        static void Background(string tishi)
+        static void Background(string PTS1)
         {
-            int windowWidth = Console.WindowWidth;
-            string story01 = " 0%-";
-            string story02 = "-----------------";
-            string story03 = "------";
-            string story04 = "------------------------------------100% ";
+            //int windowWidth = Console.WindowWidth;
+            //string story01 = " 0%-";
+            //string story02 = "-----------------";
+            //string story03 = "------";
+            //string story04 = "------------------------------------100% ";
 
-            // 计算字符串的长度，加起来正好占满控制台窗口的宽度
-            int totalLength = story01.Length + story02.Length + story03.Length + story04.Length;
-            int remainingLength = windowWidth - totalLength;
+            //// 计算字符串的长度，加起来正好占满控制台窗口的宽度
+            //int totalLength = story01.Length + story02.Length + story03.Length + story04.Length;
+            //int remainingLength = windowWidth - totalLength;
 
-            // 平均分配剩余的长度到每个字符串
-            int extraLengthPerString = remainingLength / 3;
-            story01 = story01.PadRight(story01.Length + extraLengthPerString, '-');
-            story02 = story02.PadRight(story02.Length + extraLengthPerString, '-');
-            story03 = story03.PadRight(story03.Length + extraLengthPerString, '-');
+            //// 平均分配剩余的长度到每个字符串
+            //int extraLengthPerString = remainingLength / 3;
+            //story01 = story01.PadRight(story01.Length + extraLengthPerString, '-');
+            //story02 = story02.PadRight(story02.Length + extraLengthPerString, '-');
+            //story03 = story03.PadRight(story03.Length + extraLengthPerString, '-');
 
             string story1 =
                 "\n\r\n\r“江湖传闻，百年前，一代剑神“无影剑”独孤绝留下一柄绝世神剑——“宿命之刃”，" +
@@ -50,23 +50,27 @@ namespace playWithWords   //命名空间
                 "是追寻宿命之刃的力量，还是揭开背后的阴谋，守护江湖的和平？" +
                 "\n\r\n\r";
 
-            PrintSlowly(story01, 100);
-            PrintSlowly(story02, 40);
-            PrintSlowly(story03, 120);
-            PrintSlowly(story04, 20);
+            //PrintSlowly(story01, 100);
+            //PrintSlowly(story02, 40);
+            //PrintSlowly(story03, 120);
+            //PrintSlowly(story04, 20);
 
 
-            //PrintSlowly(story1, 50);
             PrintSlowlyWithSpaceCheck(story1, 100);
-            Console.WriteLine(tishi);
+            Console.WriteLine(PTS1);
             Console.ReadKey();
-            DeleteLastLine(tishi.Length);
 
-            //PrintSlowly(story2, 50);
+            //删除提示词
+            DeleteLastLine(PTS1.Length);
+
+
             PrintSlowlyWithSpaceCheck(story2, 50);
-            Console.WriteLine(tishi);
+            Console.WriteLine(PTS1);
             Console.ReadKey();
-            DeleteLastLine(tishi.Length);
+
+            //删除提示词
+            DeleteLastLine(PTS1.Length);
+
         }
 
 
@@ -100,14 +104,21 @@ namespace playWithWords   //命名空间
         {
             while (true)
             {
-                Console.WriteLine("请选择性别（男/女）：");
+                string HTS1 = "「恕老夫眼拙，不辨雌雄，敢问少侠？」";
+                string HTS2 = "「      请正确输入性别（男/女)：      」";
+                Console.WriteLine(HTS1);
                 string xingbie = Console.ReadLine();
+                //删除提示词
+                Program.DeleteLastLine(HTS1.Length);
+                Program.DeleteLastLine(HTS1.Length);
 
                 while (string.IsNullOrWhiteSpace(xingbie) || (xingbie != "男" && xingbie != "女"))
                 {
-                    Console.WriteLine("请正确输入（男/女)：");
+                    Console.WriteLine(HTS2);
                     xingbie = Console.ReadLine();
-                    Console.WriteLine();
+                    //删除提示词
+                    Program.DeleteLastLine(HTS2.Length);
+                    Program.DeleteLastLine(HTS2.Length);
                 }
 
                 if (xingbie == "男")
