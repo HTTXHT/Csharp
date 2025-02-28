@@ -94,7 +94,9 @@ namespace playWithWords
                 + "\n\r                    宿命藏锋处，侠心照千古。”               ");
             string story3 =
                 "\n\r\n\r" + mingzi + " 少侠， " + "欢迎来到《剑影江湖：宿命之刃》";
-            string story4 = "\n\r\n\r" + "       你准好了吗？" + "\n\r\n\r";
+            Console.WriteLine("       ");
+
+           string story4 = "\n\r\n\r" + "       你准好了吗？" + "\n\r\n\r";
 
             Program.PrintSlowlyWithSpaceCheck(story3, 50);
             Program.PrintSlowlyWithSpaceCheck(story4, 200);
