@@ -1,0 +1,14 @@
+D:\CODE\csharp\helloCS\helloCS\bin\Debug\helloCS.exe.config
+D:\CODE\csharp\helloCS\helloCS\bin\Debug\helloCS.exe
+D:\CODE\csharp\helloCS\helloCS\bin\Debug\helloCS.pdb
+D:\CODE\csharp\helloCS\helloCS\obj\Debug\Play with words.csproj.AssemblyReference.cache
+D:\CODE\csharp\helloCS\helloCS\obj\Debug\Play with words.csproj.CoreCompileInputs.cache
+D:\CODE\csharp\helloCS\helloCS\obj\Debug\helloCS.exe
+D:\CODE\csharp\helloCS\helloCS\obj\Debug\helloCS.pdb
+D:\CODE\csharp\helloCsharp\Play With Words\bin\Debug\helloCS.exe.config
+D:\CODE\csharp\helloCsharp\Play With Words\bin\Debug\helloCS.exe
+D:\CODE\csharp\helloCsharp\Play With Words\bin\Debug\helloCS.pdb
+D:\CODE\csharp\helloCsharp\Play With Words\obj\Debug\Play with words.csproj.AssemblyReference.cache
+D:\CODE\csharp\helloCsharp\Play With Words\obj\Debug\Play with words.csproj.CoreCompileInputs.cache
+D:\CODE\csharp\helloCsharp\Play With Words\obj\Debug\helloCS.exe
+D:\CODE\csharp\helloCsharp\Play With Words\obj\Debug\helloCS.pdb
