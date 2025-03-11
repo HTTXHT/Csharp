@@ -9,7 +9,7 @@ namespace playWithWords
         public static void ShowHeroInfo(Hero hero, string xingbie)
         {
             string PTS1 = "\n任意键继续......";
-            string PTS12 = "老乞丐：「看你小子挺顺眼，闲来无事，教你两招」"+"\n\r\n\r";
+            string PTS12 = "老乞丐：「看你小子挺顺眼，闲来无事，便教你两招」"+"\n\r\n\r";
             Console.WriteLine(PTS12);
             Console.ReadKey();
             Program.DeleteLastLine(PTS12.Length);
